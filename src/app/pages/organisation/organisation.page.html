@@ -1,0 +1,32 @@
+<ion-header class=" primary">
+  <ion-toolbar class="headerColor">
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false" class="headerTextColor"></ion-menu-button>
+    </ion-buttons>
+    <ion-title class=" headerTextColor" >Organisation Details</ion-title>
+    <ion-text slot="end" class=" ion-padding-end cursorPointer headerTextColor" (click)="onAddOrganisation()">
+      Add New
+    </ion-text>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-content-background">
+  <ion-grid>
+    <ion-row>
+<ion-col size="12" size-md="3" *ngFor="let org of organisationArr; let i = index">
+  <ion-card color="secondary">
+    <ion-card-header>
+      <ion-card-title>Name: <ion-text>{{org.name}}</ion-text></ion-card-title>
+      <ion-card-subtitle>Address: {{org.address}}</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content> 
+      <ion-text>Details: {{org.details}}</ion-text>
+      <ion-text>GST: {{org.gst}}</ion-text>
+     </ion-card-content>
+  </ion-card>
+  </ion-col>
+  
+</ion-row>
+</ion-grid>
+  
+</ion-content>

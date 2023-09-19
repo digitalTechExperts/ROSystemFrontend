@@ -1,12 +1,15 @@
-<ion-header>
-  <ion-toolbar>
+<ion-header class=" primary">
+  <ion-toolbar class="headerColor">
     <ion-buttons slot="start">
-      <ion-menu-button autoHide="false"></ion-menu-button>
+      <ion-menu-button autoHide="false" class="headerTextColor"></ion-menu-button>
     </ion-buttons>
-    <ion-title>Complaints</ion-title>
+    <ion-title class=" headerTextColor" >Complaints</ion-title>
+    <ion-text slot="end" class=" ion-padding-end cursorPointer headerTextColor" (click)="onAddComplaints()">
+      Add New
+    </ion-text>
   </ion-toolbar>
 </ion-header>
-<ion-content>
+<ion-content class="ion-content-background">
   <div class="container">
     <h2 class="form-title">Add Customer</h2>
     <form class="customer-form" (ngSubmit)="onSubmit()" #customerForm="ngForm">

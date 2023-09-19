@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-complaints',
@@ -13,7 +14,7 @@ export class ComplaintsPage implements OnInit {
     phone: ''
   };
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
@@ -26,6 +27,10 @@ export class ComplaintsPage implements OnInit {
       email: '',
       phone: ''
     };
+  }
+
+  onAddComplaints(){
+    this.router.navigate(['/add-complaints'])
   }
 
 }
